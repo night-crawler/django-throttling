@@ -13,7 +13,7 @@ setup(
     keywords='django, throttling',
     author='Igor',
     author_email='lilo.panic@gmail.com',
-    url='http://github.com.org/night-crawler/django-throttling',
+    url='http://github.com/night-crawler/django-throttling',
     license='MIT',
     package_dir={'django_throttling': 'django_throttling'},
     include_package_data=True,
