@@ -83,6 +83,8 @@ SETTINGS
       Default pattern: ``%(prefix)s:%(uid)s:%(ip)s:%(method)s``
     * ``site``: a global pattern. Default: ``%(prefix)s:%(uid)s:%(ip)s``
 
+* ``DJANGO_THROTTLING_IGNORE_ADMINS``: ignore throttling if user is admin.
+  Default is ``True``.
 * ``DJANGO_THROTTLING``: a dict with app-path keys that configures the limits.
   I.e.:
   ``{'django.contrib.admin.options.change_view': {'all': 50, 'post': 5000}}``

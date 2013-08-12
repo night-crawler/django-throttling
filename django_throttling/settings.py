@@ -5,7 +5,6 @@ THROTTLING_ENABLED = getattr(settings, 'DJANGO_THROTTLING_ENABLED', False)
 THROTTLING_CACHE_EXPIRE = getattr(settings, 'DJANGO_THROTTLING_CACHE_EXPIRE', 60*60)
 THROTTLING_CACHE_PREFIX = getattr(settings, 'DJANGO_THROTTLING_CACHE_PREFIX', 'THROTTLING')
 
-
 THROTTLING = getattr(settings, 'DJANGO_THROTTLING', {})
 
 THROTTLING_CACHE_KEY_PATTERNS = getattr(settings, 'DJANGO_THROTTLING_CACHE_KEY_PATTERNS', {
@@ -15,3 +14,5 @@ THROTTLING_CACHE_KEY_PATTERNS = getattr(settings, 'DJANGO_THROTTLING_CACHE_KEY_P
     'site_method': "%(prefix)s:%(uid)s:%(ip)s:%(method)s",
     'site': "%(prefix)s:%(uid)s:%(ip)s",
 })
+
+THROTTLING_IGNORE_ADMINS = getattr(settings, 'DJANGO_THROTTLING_IGNORE_ADMINS', True)

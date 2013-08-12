@@ -7,7 +7,8 @@ from .settings import THROTTLING,\
     THROTTLING_CACHE_PREFIX, \
     THROTTLING_CACHE_EXPIRE, \
     THROTTLING_CACHE_KEY_PATTERNS, \
-    THROTTLING_ENABLED
+    THROTTLING_ENABLED, \
+    THROTTLING_IGNORE_ADMINS
 
 
 def ip(request):
@@ -64,6 +65,9 @@ class Throttle(object):
 
     def check(self):
         if not THROTTLING_ENABLED:
+            return
+
+        if THROTTLING_IGNORE_ADMINS and self.request.user.is_superuser:
             return
 
         cache_key, timeout = self.get_cache_key()
