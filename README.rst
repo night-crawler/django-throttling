@@ -203,7 +203,7 @@ Per-view throttling is almost the same::
 
         'django.contrib.admin.options.change_view': {
             'post': False,            
-            'all': None,
+            'all': 0,
             'uri': '/admin/forum/post/23/',
             # 'post': 'callable:helpers.trash.my_callback',
             # 'all': 4000,        
